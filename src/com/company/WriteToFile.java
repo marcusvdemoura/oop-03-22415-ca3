@@ -1,7 +1,6 @@
 package com.company;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class WriteToFile {
 
@@ -20,15 +19,22 @@ public class WriteToFile {
     }
 
     public WriteToFile(Movie m, String fileName) {
-        try {
-            FileWriter myWriter = new FileWriter(fileName+".txt");
-            myWriter.write("LIST: \n");
-            myWriter.append(m.toString()+"\n");
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+
+        try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(fileName+".txt", true)));) {
+            String data = "\n" + m.toString();
+            File file = new File(fileName+".txt");
+            out.println(data);
+        } catch(IOException e) {
+        }
+    }
+
+    public WriteToFile(Customer c, String fileName) {
+
+        try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(fileName+".txt", true)));) {
+            String data = "\n" + c.toString();
+            File file = new File(fileName+".txt");
+            out.println(data);
+        } catch(IOException e) {
         }
     }
 

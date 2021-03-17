@@ -17,6 +17,8 @@ public class RentalStore implements Tasks {
 
     private WriteToFile writeToFile;
 
+    private ReadFile readFile;
+
 
     public RentalStore(String storeName) {
         this.storeName = storeName;
@@ -51,6 +53,8 @@ public class RentalStore implements Tasks {
     public void addCustomerToList(Customer c) {
 
         getListOfCustomers().add(c);
+        writeToFile = new WriteToFile(c, "ListCustomers");
+
 
     }
 
@@ -97,6 +101,13 @@ public class RentalStore implements Tasks {
             System.out.println(movie.toString() + "\n");
             System.out.println("-----------------------");
         }
+    }
+
+    public void printListCustomers() {
+
+        readFile = new ReadFile("ListCustomers");
+
+
     }
 
 }

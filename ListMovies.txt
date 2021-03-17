@@ -1,4 +1,0 @@
-LIST: 
-Movie: Avengers Infinity War
-Year of Release: 2017
-Genre: Adventure
