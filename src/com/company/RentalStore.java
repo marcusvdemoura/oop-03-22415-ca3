@@ -21,6 +21,8 @@ public class RentalStore implements Tasks {
     private ReadFile readFile;
 
 
+
+
     public RentalStore(String storeName) {
         this.storeName = storeName;
         CreateFile listOfCustomersTXT = new CreateFile("ListCustomers");

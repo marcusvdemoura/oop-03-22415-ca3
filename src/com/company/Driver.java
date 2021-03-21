@@ -7,7 +7,8 @@ public class Driver {
         Customer marcus = new Customer("Marcus", "Moura", "marcus@moura.com");
         Customer janis = new Customer("Janis", "Celmars", "janis@celmars.com");
         Customer eduardo = new Customer("Eduardo", "Fiori", "edu@fiori.com");
-        Customer ines = new Customer("Ines", "Bruxinha", "ines@rastatabacanavara.com");
+        Customer ines = new Customer("Ines", "Bruxinha", "Ines@rastatabacanavara.com");
+        Customer carol = new Customer("Carol", "Propato", "1234");
 
         RentalStore rentalStore = new RentalStore("Rental Marcus");
 
@@ -15,6 +16,7 @@ public class Driver {
         rentalStore.addCustomerToList(janis);
         rentalStore.addCustomerToList(eduardo);
         rentalStore.addCustomerToList(ines);
+        rentalStore.addCustomerToList(carol);
 
         Movie harryPotter = new Movie("Harry Potter and the Deathly Hallows part 1", "2010", "fantasy");
         Movie avengers = new Movie("Avengers Infinity War", "2017", "Adventure");
@@ -29,12 +31,12 @@ public class Driver {
         rentalStore.addMovieToCatalog(capitanAmerica);
 
 
-        rentalStore.printMoviesRented();
+//        rentalStore.printMoviesRented();
 
 
 //        rentalStore.printCatalog();
 //
-//        rentalStore.printListCustomers();
+        rentalStore.printListCustomers();
 
 
 
