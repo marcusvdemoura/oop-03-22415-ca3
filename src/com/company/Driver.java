@@ -29,9 +29,12 @@ public class Driver {
         rentalStore.addMovieToCatalog(capitanAmerica);
 
 
-        rentalStore.printCatalog();
+        rentalStore.printMoviesRented();
 
-        rentalStore.printListCustomers();
+
+//        rentalStore.printCatalog();
+//
+//        rentalStore.printListCustomers();
 
 
 

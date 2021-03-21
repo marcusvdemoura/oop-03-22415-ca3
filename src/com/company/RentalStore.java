@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class RentalStore implements Tasks {
 
@@ -100,6 +101,18 @@ public class RentalStore implements Tasks {
         for (Movie movie : getListOfMovies()) {
             System.out.println(movie.toString() + "\n");
             System.out.println("-----------------------");
+        }
+    }
+
+    void printMoviesRented(){
+
+        HashMap<String, String> moviesRented = getMoviesRented();
+
+        System.out.println("MOVIES RENTED:\n");
+
+        for (Map.Entry<String, String> movie: moviesRented.entrySet()){
+            System.out.println("Movie: "+movie.getKey() + "\n" + "Genre: " + movie.getValue());
+            System.out.println("--------------------");
         }
     }
 
